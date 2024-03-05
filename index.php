@@ -6,7 +6,7 @@
 <body>
     <?php
     // Code PHP pour afficher Hello World
-    echo "<h1>Hello World!</h1>";
+    echo "<h1>Hello, World!</h1>";
     ?>
 </body>
 </html>
