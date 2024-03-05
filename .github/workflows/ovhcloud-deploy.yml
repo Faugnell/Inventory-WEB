@@ -17,10 +17,10 @@ jobs:
 
       - name: Clone over SSH
         env:
-          OVH_SSH_HOST: ${{ secrets.OVH_SSH_HOST }}
-          OVH_SSH_PORT: ${{ secrets.OVH_SSH_PORT }}
-          OVH_SSH_USERNAME: ${{ secrets.OVH_SSH_USERNAME }}
-          OVH_SSH_PASSWORD: ${{ secrets.OVH_SSH_PASSWORD }}
+          OVH_SSH_HOST: ftp.cluster029.hosting.ovh.net
+          OVH_SSH_PORT: 21
+          OVH_SSH_USERNAME: apiinks
+          OVH_SSH_PASSWORD: Vic0117879816
         run: |
           sshpass -p $OVH_SSH_PASSWORD ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null -oLogLevel=quiet $OVH_SSH_USERNAME@$OVH_SSH_HOST -p $OVH_SSH_PORT -- 'rm -rf $HOME && git clone $GITHUB_SERVER_URL/$GITHUB_REPOSITORY.git --single-branch --branch ${{ github.ref }} $HOME'
 
