@@ -1,0 +1,35 @@
+name: Deploy to OVHcloud Power
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+jobs:
+  deploy:    
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Install prerequisites
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl jq sshpass openssh-client
+
+      - name: WakeUp website
+        env:
+            OVH_WEBSITE_URL: "https://api-inkventory.ovh" # Remplacez par votre URL
+        run: curl --silent --insecure --location --write-out "%{http_code}" -o /dev/null $OVH_WEBSITE_URL
+
+      - name: Clone over SSH
+        env:
+            OVH_SSH_HOST: "ftp.cluster029.hosting.ovh.net", # Remplacez par votre hôte SSH
+            OVH_SSH_PORT: "21", # Remplacez par votre port SSH
+            OVH_SSH_USERNAME: "apiinks", # Remplacez par votre nom d'utilisateur SSH
+            OVH_SSH_PASSWORD: ${{ secrets.Vic0117879816 }}, # Remplacez par votre mot de passe SSH (stocké dans les secrets GitHub)
+            GITHUB_SERVER_URL: "https://github.com", 
+            GITHUB_REPOSITORY: "Faugnell/Inventory-WEB",
+            GITHUB_REF: "main"
+        run: |
+          sshpass -p $OVH_SSH_PASSWORD ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null -oLogLevel=quiet $OVH_SSH_USERNAME@$OVH_SSH_HOST -p $OVH_SSH_PORT -- 'rm -rf ${HOME} && git clone '${GITHUB_SERVER_URL}'/'${GITHUB_REPOSITORY}'.git --single-branch --branch '${GITHUB_REF}' ${HOME}'
+
+      - name: WakeUp website
+        env:
+            OVH_WEBSITE_URL: "https://api-inkventory.ovh" # Remplacez par votre URL
+        run: curl --silent --fail --insecure --location --write-out "%{http_code}" -o /dev/null $OVH_WEBSITE_URL
