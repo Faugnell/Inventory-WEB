@@ -19,15 +19,15 @@ jobs:
 
       - name: Clone over SSH
         env:
-            OVH_SSH_HOST: "ftp.cluster029.hosting.ovh.net", # Remplacez par votre hôte SSH
-            OVH_SSH_PORT: "21", # Remplacez par votre port SSH
-            OVH_SSH_USERNAME: "apiinks", # Remplacez par votre nom d'utilisateur SSH
-            OVH_SSH_PASSWORD: ${{ secrets.Vic0117879816 }}, # Remplacez par votre mot de passe SSH (stocké dans les secrets GitHub)
-            GITHUB_SERVER_URL: "https://github.com", 
-            GITHUB_REPOSITORY: "Faugnell/Inventory-WEB",
+            OVH_SSH_HOST: "ftp.cluster029.hosting.ovh.net" # Remplacez par votre hôte SSH
+            OVH_SSH_PORT: "21" # Remplacez par votre port SSH
+            OVH_SSH_USERNAME: "apiinks" # Remplacez par votre nom d'utilisateur SSH
+            OVH_SSH_PASSWORD: ${{ secrets.Vic0117879816 }} # Remplacez par votre mot de passe SSH (stocké dans les secrets GitHub)
+            GITHUB_SERVER_URL: "https://github.com" 
+            GITHUB_REPOSITORY: "Faugnell/Inventory-WEB"
             GITHUB_REF: "main"
         run: |
-          sshpass -p $OVH_SSH_PASSWORD ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null -oLogLevel=quiet $OVH_SSH_USERNAME@$OVH_SSH_HOST -p $OVH_SSH_PORT -- 'rm -rf ${HOME} && git clone '${GITHUB_SERVER_URL}'/'${GITHUB_REPOSITORY}'.git --single-branch --branch '${GITHUB_REF}' ${HOME}'
+          sshpass -p $OVH_SSH_PASSWORD ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null -oLogLevel=quiet $OVH_SSH_USERNAME@$OVH_SSH_HOST -p $OVH_SSH_PORT -- "rm -rf ${HOME} && git clone ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git --single-branch --branch ${GITHUB_REF} ${HOME}"
 
       - name: WakeUp website
         env:
