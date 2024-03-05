@@ -18,7 +18,7 @@ jobs:
       - name: Clone over SSH
         env:
           OVH_SSH_HOST: ftp.cluster029.hosting.ovh.net
-          OVH_SSH_PORT: 21
+          OVH_SSH_PORT: 22
           OVH_SSH_USERNAME: apiinks
           OVH_SSH_PASSWORD: Vic0117879816
         run: |
