@@ -3,17 +3,32 @@
 html,
 body {
     font-family: 'Inter', sans-serif;
+    margin: 0;
+    /* Supprime les marges par défaut du corps */
+    padding: 0;
+    /* Supprime les rembourrages par défaut du corps */
 }
 
 
 /* Style du header */
 
 header {
+    position: fixed;
+    /* Le rend fixe */
+    top: 0;
+    /* Le positionne tout en haut de la fenêtre */
+    left: 0;
+    /* Le positionne tout à gauche de la fenêtre */
+    width: 100%;
+    /* Le rend 100% de large */
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #333;
     color: white;
+    padding: 10px;
+    z-index: 1000;
+    /* Assure que le header est au-dessus du contenu */
 }
 
 
@@ -73,6 +88,5 @@ li a:hover:not(.active) {
     color: #333;
     padding: 10px 20px;
     border-radius: 20px;
-    /* Bords arrondis */
     cursor: pointer;
 }
