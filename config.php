@@ -6,6 +6,9 @@ if (!isset($_SESSION["id_role"])) {
     $_SESSION["id_role"] = 0; // Ou toute autre valeur par défaut
 }
 
+define('SITE_URL', 'https://api-inkventory.ovh/');
+define('USER_URL', SITE_URL . 'view/user/');
+define('ADMIN_URL', SITE_URL . 'view/admin/');
 define('DB_HOST', 'apiinks228.mysql.db');
 define('DB_USER', 'apiinks228');
 define('DB_PASS', 'Vic0117879816');
