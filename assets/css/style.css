@@ -1,3 +1,27 @@
+/* Style du header */
+
+html {
+    font-family: 'Inter', sans-serif;
+    /* Utilisation de la police Inter */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+
+/* Style du logo */
+
+.logo {
+    font-size: 24px;
+}
+
+
 /* Style de la liste ul */
 
 ul {
@@ -5,10 +29,6 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
 }
 
 
@@ -27,6 +47,8 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    /* Utilisation de la police Inter */
 }
 
 

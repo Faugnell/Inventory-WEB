@@ -9,6 +9,8 @@ Autoloader::register();
     <meta charset="UTF-8">
     <title>Lab'CESI</title>
     <link rel="stylesheet" type="text/css" href="https://api-inkventory.ovh/assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+
     <script src="<?= SITE_URL; ?>/assets/js/script.js"></script>
 </head>
 
