@@ -6,6 +6,14 @@ if (!isset($_SESSION["id_role"])) {
     $_SESSION["id_role"] = 0; // Ou toute autre valeur par défaut
 }
 
+if (isset($_SESSION['userLoggedIn']) && $_SESSION['userLoggedIn']) {
+    // L'utilisateur est connecté
+    $userLoggedIn = true;
+} else {
+    // L'utilisateur n'est pas connecté
+    $userLoggedIn = false;
+}
+
 define('SITE_URL', 'https://api-inkventory.ovh/');
 define('USER_URL', SITE_URL . 'view/user/');
 define('ADMIN_URL', SITE_URL . 'view/admin/');
