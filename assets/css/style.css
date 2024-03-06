@@ -1,33 +1,44 @@
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-}
+/* Style de la liste ul */
 
-.logo {
-    font-size: 24px;
-}
-
-nav ul {
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
-nav ul li {
-    display: inline-block;
-    margin-left: 20px;
+
+/* Style des éléments li */
+
+li {
+    float: left;
 }
 
-nav ul li:first-child {
-    margin-left: 0;
-}
 
-nav ul li a {
+/* Style des liens dans les éléments li */
+
+li a {
+    display: block;
     color: white;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-    font-size: 18px;
+}
+
+
+/* Style des liens survolés */
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+
+/* Style des liens actifs */
+
+.active {
+    background-color: #04AA6D;
 }
