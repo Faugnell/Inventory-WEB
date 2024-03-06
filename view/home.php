@@ -1,7 +1,7 @@
 <?php
 require_once(realpath(__DIR__ . '/../view/part/header.php'));
 ?>
-<div class="container">
+<div class="main-content">
         <!-- Premier bloc -->
         <div class="block">
             <img src="image_floutee.jpg" alt="Image floutée">
