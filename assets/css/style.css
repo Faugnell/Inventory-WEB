@@ -10,6 +10,14 @@ body {
 }
 
 
+/* Ajouter une marge au contenu en-dessous de l'en-tête */
+
+.main-content {
+    margin-top: 60px;
+    /* Ajustez cette valeur en fonction de la hauteur de votre en-tête */
+}
+
+
 /* Style du header */
 
 header {
