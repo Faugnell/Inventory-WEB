@@ -1,17 +1,20 @@
-/* Style du header */
+/* Définir la police Inter pour tout le site */
 
-html {
+html,
+body {
     font-family: 'Inter', sans-serif;
-    /* Utilisation de la police Inter */
 }
+
+
+/* Style du header */
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
     background-color: #333;
     color: white;
+    padding: 10px;
 }
 
 
@@ -47,8 +50,6 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-family: 'Inter', sans-serif;
-    /* Utilisation de la police Inter */
 }
 
 
@@ -63,4 +64,16 @@ li a:hover:not(.active) {
 
 .active {
     background-color: #04AA6D;
+}
+
+
+/* Style du bouton de connexion */
+
+.login-button {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 20px;
+    /* Bords arrondis */
+    cursor: pointer;
 }

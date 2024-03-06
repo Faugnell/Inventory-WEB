@@ -8,4 +8,5 @@
             <li><a href="<?= SITE_URL; ?>/histoire">Histoire</a></li>
         </ul>
     </nav>
+    <div class="login-button">Connexion</div>
 </header>
