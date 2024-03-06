@@ -1,31 +1,19 @@
+on: 
+ push:
+  branches: [ "main" ]
 name: Deploy to OVHcloud Power
-
-on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
-
 jobs:
-  deploy:    
-    runs-on: ubuntu-20.04
-
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
     steps:
-      - name: Install prerequisites
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y curl jq sshpass openssh-client
-
-      - name: Clone over SSH
-        env:
-          OVH_SSH_HOST: ftp.cluster029.hosting.ovh.net
-          OVH_SSH_PORT: 22
-          OVH_SSH_USERNAME: apiinks
-          OVH_SSH_PASSWORD: Vic0117879816
-        run: |
-          sshpass -p $OVH_SSH_PASSWORD ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null -oLogLevel=quiet $OVH_SSH_USERNAME@$OVH_SSH_HOST -p $OVH_SSH_PORT -- 'rm -rf $HOME && git clone $GITHUB_SERVER_URL/$GITHUB_REPOSITORY.git --single-branch --branch ${{ github.ref }} $HOME'
-
-      - name: WakeUp website
-        env:
-          OVH_WEBSITE_URL: ${{ secrets.OVH_WEBSITE_URL }}
-        run: |
-          curl --silent --fail --insecure --location --write-out "%{http_code}" -o /dev/null $OVH_WEBSITE_URL
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ftp.cluster029.hosting.ovh.net
+        username: apiinks
+        password: Vic0117879816
+        server-dir: /www
