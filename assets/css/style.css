@@ -13,7 +13,7 @@ body {
 /* Ajouter une marge au contenu en-dessous de l'en-tête */
 
 .main-content {
-    margin-top: 60px;
+    margin-top: 80px;
     /* Ajustez cette valeur en fonction de la hauteur de votre en-tête */
 }
 
@@ -96,5 +96,6 @@ li a:hover:not(.active) {
     color: #333;
     padding: 10px 20px;
     border-radius: 20px;
+    margin-right: 20px;
     cursor: pointer;
 }
