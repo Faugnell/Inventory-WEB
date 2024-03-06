@@ -4,7 +4,7 @@ require_once(realpath(__DIR__ . '/../view/part/header.php'));
 <div class="main-content">
         <!-- Premier bloc -->
         <div class="block">
-            <img src="image_floutee.jpg" alt="Image floutée">
+            <img src="/../assets/img/image_floutee.webp" alt="Image floutée">
             <div class="overlay">
                 <h2>Bienvenue au FabLab</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
