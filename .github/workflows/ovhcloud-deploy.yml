@@ -16,4 +16,4 @@ jobs:
         server: ftp.cluster029.hosting.ovh.net
         username: apiinks
         password: Vic0117879816
-        server-dir: /www
+        server-dir: /www/
