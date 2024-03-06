@@ -104,26 +104,29 @@ li a:hover:not(.active) {
     display: none;
     position: absolute;
     background-color: #fff;
-    /* Couleur de fond du menu */
     min-width: 160px;
     z-index: 1;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    /* Ombre */
 }
 
 #evenements-menu li {
     padding: 10px;
-    /* Espacement des éléments de la liste */
 }
 
 #evenements-menu li a {
     color: #333;
-    /* Couleur du texte des liens */
     text-decoration: none;
     display: block;
+    /* Afficher les liens en tant que blocs */
 }
 
 #evenements-menu li a:hover {
     background-color: #f4f4f4;
-    /* Couleur de fond au survol */
+}
+
+
+/* Afficher les éléments de la sous-liste en tant que blocs */
+
+#evenements-menu ul {
+    display: block;
 }
