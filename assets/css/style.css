@@ -130,3 +130,49 @@ li a:hover:not(.active) {
 #evenements-menu ul {
     display: block;
 }
+
+
+/* Styles spécifiques au premier bloc */
+
+.first-block {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.first-block img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.first-block .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.first-block .overlay h2 {
+    margin-bottom: 10px;
+}
+
+.first-block .overlay p {
+    margin-bottom: 20px;
+}
+
+.first-block .overlay .button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.first-block .overlay .button:hover {
+    background-color: #0056b3;
+}
