@@ -150,11 +150,17 @@ li a:hover:not(.active) {
     position: absolute;
     bottom: 20px;
     /* Espacement en bas */
-    left: 20px;
-    /* Espacement à gauche */
+    left: 50%;
+    /* Centre l'overlay horizontalement */
+    transform: translateX(-50%);
+    /* Ajuste pour centrer l'overlay */
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
+    max-width: 80%;
+    /* Limite la largeur de l'overlay */
+    text-align: center;
+    /* Centre le texte horizontalement */
 }
 
 .first-block .overlay h2 {
