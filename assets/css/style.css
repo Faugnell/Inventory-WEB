@@ -144,7 +144,7 @@ li a:hover:not(.active) {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    filter: blur(3px);
+    filter: blur(1px);
 }
 
 .first-block .overlay {
