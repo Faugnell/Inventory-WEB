@@ -210,3 +210,24 @@ li a:hover:not(.active) {
     text-align: center;
     /* Centrer le texte horizontalement */
 }
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -15px;
+    /* Gérer les marges négatives pour les éléments */
+}
+
+.project-link {
+    width: calc(25% - 30px);
+    /* 25% de largeur pour chaque image avec un espacement de 30px entre elles */
+    margin: 0 15px 30px;
+    /* Espacement entre les images */
+}
+
+.project-link img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
