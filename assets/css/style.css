@@ -150,7 +150,7 @@ li a:hover:not(.active) {
     position: absolute;
     bottom: 20px;
     /* Espacement en bas */
-    left: 30%;
+    left: 40%;
     /* Centre l'overlay horizontalement */
     transform: translateX(-50%);
     /* Ajuste pour centrer l'overlay */
