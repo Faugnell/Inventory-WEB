@@ -13,7 +13,7 @@ require_once(realpath(__DIR__ . '/../view/part/header.php'));
         </div>
 
         <!-- Deuxième bloc -->
-        <div class="block">
+        <div class="block second-block">
             <h2>Nos équipements</h2>
             <p>Nous proposons une large gamme de services de fabrication pour vous aider à concrétiser vos idées. Que vous soyez étudiant, artiste, entrepreneur ou amateur, notre équipe d'experts peut vous aider à concevoir et à construire votre prochain projet. Visitez notre Lab'CESI dès aujourd'hui pour en savoir plus !</p>
             <div class="cards">

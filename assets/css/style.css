@@ -144,7 +144,7 @@ li a:hover:not(.active) {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    filter: blur(5px);
+    filter: blur(3px);
 }
 
 .first-block .overlay {
@@ -185,28 +185,28 @@ li a:hover:not(.active) {
     background-color: #0056b3;
 }
 
-.first-block .cards {
+.second-block .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     /* Espacement égal entre les cartes */
 }
 
-.first-block .card {
+.second-block .card {
     width: calc(20% - 20px);
     /* 20% de largeur pour chaque carte avec un espacement de 20px */
     margin-bottom: 20px;
     /* Espacement entre les lignes */
 }
 
-.first-block .card img {
+.second-block .card img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-.first-block .card h3,
-.first-block .card p {
+.second-block .card h3,
+.second-block .card p {
     text-align: center;
     /* Centrer le texte horizontalement */
 }
