@@ -55,14 +55,21 @@ require_once(realpath(__DIR__ . '/../view/part/header.php'));
             <h2>Projets réalisés</h2>
             <div class="projects">
                 <!-- Projet 1 -->
-                <a href="projet1.html" class="project-link">
+                <a href="/../assets/img/projet1.html" class="project-link">
                     <img src="projet1.jpg" alt="Projet 1">
                 </a>
                 <!-- Projet 2 -->
-                <a href="projet2.html" class="project-link">
+                <a href="/../assets/img/projet2.html" class="project-link">
                     <img src="projet2.jpg" alt="Projet 2">
                 </a>
-                <!-- Ajouter d'autres projets ici -->
+                <!-- Projet 3 -->
+                <a href="/../assets/img/projet3.html" class="project-link">
+                    <img src="projet3.jpg" alt="Projet 3">
+                </a>
+                <!-- Projet 4 -->
+                <a href="/../assets/img/projet4.html" class="project-link">
+                    <img src="projet4.jpg" alt="Projet 4">
+                </a>
             </div>
         </div>
     </div>
